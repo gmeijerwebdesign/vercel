@@ -1,27 +1,22 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif; /* Correcte toepassing van lettertype */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.header {
+  background-image: linear-gradient(45deg, #0a091b, #111934);
+  height: 500px;
+  clip-path: polygon(0 0, 100% 0%, 100% 71%, 0% 100%);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media only screen and (max-width: 600px) {
+  .header {
+    background-image: linear-gradient(90deg, #0a091b, #111934);
   }
 }
